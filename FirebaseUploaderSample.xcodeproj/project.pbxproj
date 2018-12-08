@@ -56,6 +56,16 @@
 		ADD8D28C21BB8824000C8532 /* TopWireframeStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D28B21BB8824000C8532 /* TopWireframeStub.swift */; };
 		ADD8D28E21BB882E000C8532 /* TopInteractorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D28D21BB882E000C8532 /* TopInteractorStub.swift */; };
 		ADD8D29121BB89A0000C8532 /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D29021BB89A0000C8532 /* UserMock.swift */; };
+		ADD8D29421BB8C5B000C8532 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D29321BB8C5B000C8532 /* UploadViewController.swift */; };
+		ADD8D29A21BB8CB8000C8532 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD8D29821BB8CB8000C8532 /* Photos.framework */; };
+		ADD8D29B21BB8CB8000C8532 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD8D29921BB8CB8000C8532 /* PhotosUI.framework */; };
+		ADD8D29E21BB8D0B000C8532 /* UploadInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D29D21BB8D0B000C8532 /* UploadInterfaces.swift */; };
+		ADD8D2A021BB8D14000C8532 /* UploadPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D29F21BB8D14000C8532 /* UploadPresenter.swift */; };
+		ADD8D2A221BB8D1F000C8532 /* UploadInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D2A121BB8D1F000C8532 /* UploadInteractor.swift */; };
+		ADD8D2A421BB8D29000C8532 /* UploadWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D2A321BB8D29000C8532 /* UploadWireframe.swift */; };
+		ADD8D2A721BB9566000C8532 /* UploadViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD8D2A621BB9566000C8532 /* UploadViewCell.xib */; };
+		ADD8D2A921BB9591000C8532 /* UploadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D2A821BB9591000C8532 /* UploadViewCell.swift */; };
+		ADD8D2AB21BB9809000C8532 /* UploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD8D2AA21BB9809000C8532 /* UploadViewController.xib */; };
 		E037E1DA70497434F1EA2FFB /* Pods_FirebaseUploaderSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA79350ABCA6A74355E4BC70 /* Pods_FirebaseUploaderSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +169,16 @@
 		ADD8D28B21BB8824000C8532 /* TopWireframeStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopWireframeStub.swift; sourceTree = "<group>"; };
 		ADD8D28D21BB882E000C8532 /* TopInteractorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopInteractorStub.swift; sourceTree = "<group>"; };
 		ADD8D29021BB89A0000C8532 /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
+		ADD8D29321BB8C5B000C8532 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		ADD8D29821BB8CB8000C8532 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		ADD8D29921BB8CB8000C8532 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		ADD8D29D21BB8D0B000C8532 /* UploadInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadInterfaces.swift; sourceTree = "<group>"; };
+		ADD8D29F21BB8D14000C8532 /* UploadPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPresenter.swift; sourceTree = "<group>"; };
+		ADD8D2A121BB8D1F000C8532 /* UploadInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadInteractor.swift; sourceTree = "<group>"; };
+		ADD8D2A321BB8D29000C8532 /* UploadWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadWireframe.swift; sourceTree = "<group>"; };
+		ADD8D2A621BB9566000C8532 /* UploadViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadViewCell.xib; sourceTree = "<group>"; };
+		ADD8D2A821BB9591000C8532 /* UploadViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewCell.swift; sourceTree = "<group>"; };
+		ADD8D2AA21BB9809000C8532 /* UploadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadViewController.xib; sourceTree = "<group>"; };
 		C70DEC1A463262AE86A9C40D /* Pods-FirebaseUploaderSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseUploaderSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseUploaderSample/Pods-FirebaseUploaderSample.debug.xcconfig"; sourceTree = "<group>"; };
 		C72A53B4FF0B90EF8EDC02B4 /* Pods-FirebaseUploaderSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseUploaderSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseUploaderSampleUITests/Pods-FirebaseUploaderSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +188,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD8D29A21BB8CB8000C8532 /* Photos.framework in Frameworks */,
+				ADD8D29B21BB8CB8000C8532 /* PhotosUI.framework in Frameworks */,
 				ADD8D27121BB7E38000C8532 /* Nuke.framework in Frameworks */,
 				ADD8D26F21BB7DF3000C8532 /* CodableFirebase.framework in Frameworks */,
 				E037E1DA70497434F1EA2FFB /* Pods_FirebaseUploaderSample.framework in Frameworks */,
@@ -318,6 +340,7 @@
 				ADD8D24B21BB5CE3000C8532 /* Common */,
 				AD1267D021BB4F3C00FC1932 /* Entrance */,
 				AD1267D121BB4F4600FC1932 /* Top */,
+				ADD8D29221BB8BBB000C8532 /* Upload */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -542,9 +565,66 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		ADD8D29221BB8BBB000C8532 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8D29521BB8C95000C8532 /* Interfaces */,
+				ADD8D29621BB8C9A000C8532 /* Presenter */,
+				ADD8D29721BB8CA2000C8532 /* Interactor */,
+				ADD8D29C21BB8CF6000C8532 /* Router */,
+				ADD8D2A521BB9550000C8532 /* View */,
+				ADD8D29321BB8C5B000C8532 /* UploadViewController.swift */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		ADD8D29521BB8C95000C8532 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8D29D21BB8D0B000C8532 /* UploadInterfaces.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		ADD8D29621BB8C9A000C8532 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8D29F21BB8D14000C8532 /* UploadPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ADD8D29721BB8CA2000C8532 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8D2A121BB8D1F000C8532 /* UploadInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ADD8D29C21BB8CF6000C8532 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8D2A321BB8D29000C8532 /* UploadWireframe.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		ADD8D2A521BB9550000C8532 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8D2A621BB9566000C8532 /* UploadViewCell.xib */,
+				ADD8D2A821BB9591000C8532 /* UploadViewCell.swift */,
+				ADD8D2AA21BB9809000C8532 /* UploadViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BFEAABDD4CB484FEAC325F9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADD8D29821BB8CB8000C8532 /* Photos.framework */,
+				ADD8D29921BB8CB8000C8532 /* PhotosUI.framework */,
 				ADD8D27021BB7E38000C8532 /* Nuke.framework */,
 				ADD8D26E21BB7DF2000C8532 /* CodableFirebase.framework */,
 				ADD8D26B21BB7DE8000C8532 /* FirebaseUploaderSample.xcodeproj */,
@@ -711,7 +791,9 @@
 				AD1267A421BB4DFF00FC1932 /* LaunchScreen.storyboard in Resources */,
 				AD1267A121BB4DFF00FC1932 /* Assets.xcassets in Resources */,
 				ADD8D26821BB7C1E000C8532 /* TopViewCell.xib in Resources */,
+				ADD8D2A721BB9566000C8532 /* UploadViewCell.xib in Resources */,
 				AD1267F021BB564200FC1932 /* EntranceViewController.xib in Resources */,
+				ADD8D2AB21BB9809000C8532 /* UploadViewController.xib in Resources */,
 				ADD8D25921BB675C000C8532 /* TopViewController.xib in Resources */,
 				AD1267CB21BB4F1200FC1932 /* GoogleService-Info.plist in Resources */,
 			);
@@ -893,6 +975,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD8D24221BB5A9F000C8532 /* EntranceInterfaces.swift in Sources */,
+				ADD8D2A921BB9591000C8532 /* UploadViewCell.swift in Sources */,
+				ADD8D2A221BB8D1F000C8532 /* UploadInteractor.swift in Sources */,
+				ADD8D29421BB8C5B000C8532 /* UploadViewController.swift in Sources */,
 				AD1267EB21BB513F00FC1932 /* ApplicationCoordinatorInterfaces.swift in Sources */,
 				ADD8D27921BB83A6000C8532 /* TopWireframe.swift in Sources */,
 				AD1267FC21BB59A200FC1932 /* Instantiable.swift in Sources */,
@@ -905,12 +990,15 @@
 				ADD8D26A21BB7C7C000C8532 /* TopViewCell.swift in Sources */,
 				ADD8D24521BB5B01000C8532 /* UserRegisterInteractor.swift in Sources */,
 				ADD8D27321BB7E99000C8532 /* TopInteractor.swift in Sources */,
+				ADD8D29E21BB8D0B000C8532 /* UploadInterfaces.swift in Sources */,
+				ADD8D2A421BB8D29000C8532 /* UploadWireframe.swift in Sources */,
 				ADD8D24A21BB5BFC000C8532 /* Injectable.swift in Sources */,
 				ADD8D27621BB8202000C8532 /* TopPresenter.swift in Sources */,
 				ADD8D25221BB627D000C8532 /* TopViewController.swift in Sources */,
 				ADD8D26621BB6A7C000C8532 /* NetworkingState.swift in Sources */,
 				AD1267FA21BB58D100FC1932 /* EntranceViewController.swift in Sources */,
 				ADD8D25B21BB68D8000C8532 /* TopInterfaces.swift in Sources */,
+				ADD8D2A021BB8D14000C8532 /* UploadPresenter.swift in Sources */,
 				ADD8D26421BB6A31000C8532 /* MediaEntityProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

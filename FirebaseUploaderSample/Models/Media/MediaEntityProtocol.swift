@@ -32,6 +32,7 @@ struct MediaEntity: Codable {
     var updatedAt: Date
     var state: MediaState
     var mediaType: MediaType
+    var localIdentifier: String
     var length: Int?
     var videoUrl: URL?
 }

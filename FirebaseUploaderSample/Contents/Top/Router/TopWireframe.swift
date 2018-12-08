@@ -16,7 +16,13 @@ final class TopWireframe: TopWireframeProtocol {
     }
     
     func presentUploadView() {
-        
+        let uploadViewController = UploadViewController.instantitate()
+        let interactor = UploadInteractor()
+        let router = UploadWireframe(viewController: uploadViewController)
+        let presenter = UploadPresenter(dependencies: (view: uploadViewController, interactor: interactor, router: router))
+        uploadViewController.inject(presenter)
+        let navigationController = UINavigationController(rootViewController: uploadViewController)
+        viewController?.present(navigationController, animated: true)
     }
     
 }
