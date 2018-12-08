@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import Atomic
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var applicationCoorinator: ApplicationCoordinatorProtocol!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        applicationCoorinator = ApplicationCoordinator(window: window)
+        applicationCoorinator.start()
+        window.backgroundColor = UIColor.Atomic.background
+        window.makeKeyAndVisible()
+        self.window = window
+        
         return true
     }
 
