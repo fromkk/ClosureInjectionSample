@@ -30,7 +30,7 @@ final class AssetUploaderMetadataInteractor: AssetUploaderMetadataInteractorProt
         }
         
         let now = Date()
-        let entity = MediaEntity(uid: uid, state: .exporting, mediaType: mediaType, localIdentifier: asset.localIdentifier, createdAt: now.timeIntervalSince1970, updatedAt: now.timeIntervalSince1970)
+        let entity = MediaEntity(uid: uid, state: .exporting, mediaHash: assetHash, mediaType: mediaType, mediaDate: asset.creationDate?.timeIntervalSince1970 ?? now.timeIntervalSince1970, localIdentifier: asset.localIdentifier, createdAt: now.timeIntervalSince1970, updatedAt: now.timeIntervalSince1970)
         let encoder = FirestoreEncoder()
         do {
             let data = try encoder.encode(entity)

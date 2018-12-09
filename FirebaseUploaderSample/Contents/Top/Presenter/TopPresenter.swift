@@ -8,6 +8,7 @@
 
 import Foundation
 import Media
+import DifferenceKit
 
 final class TopPresenter: TopPresenterProtocol, TopInteractorDelegate {
     
@@ -25,7 +26,7 @@ final class TopPresenter: TopPresenterProtocol, TopInteractorDelegate {
     }
     
     func upload() {
-        router.presentUploadView(with: user.uid)
+        router.presentUploadView(with: user.uid, and: entities.map { $0.localIdentifier })
     }
     
     func load() {
@@ -56,8 +57,9 @@ final class TopPresenter: TopPresenterProtocol, TopInteractorDelegate {
         
         switch state {
         case .success(let entities):
+            let changeSet = StagedChangeset<[MediaEntity]>(source: self.entities, target: entities)
             self.entities = entities
-            view?.showMedia()
+            self.view?.reloadData(with: changeSet)
         default:
             break
         }

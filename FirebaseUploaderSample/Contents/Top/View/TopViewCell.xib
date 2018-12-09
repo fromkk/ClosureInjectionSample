@@ -13,27 +13,35 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IAM-ei-X4e" customClass="TopViewCell" customModule="FirebaseUploaderSample" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="87" height="87"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="87" height="87"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Hn-48-npE">
-                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="87" height="87"/>
                     </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ihl-fI-RV7">
+                        <rect key="frame" x="33.5" y="33.5" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="7Hn-48-npE" secondAttribute="trailing" id="5oE-19-Typ"/>
+                <constraint firstItem="Ihl-fI-RV7" firstAttribute="centerY" secondItem="yw8-mx-SQK" secondAttribute="centerY" id="MLG-Xz-vav"/>
                 <constraint firstAttribute="bottom" secondItem="7Hn-48-npE" secondAttribute="bottom" id="fQ0-4x-Bn4"/>
                 <constraint firstItem="7Hn-48-npE" firstAttribute="leading" secondItem="IAM-ei-X4e" secondAttribute="leading" id="jaH-SN-pfV"/>
+                <constraint firstItem="Ihl-fI-RV7" firstAttribute="centerX" secondItem="yw8-mx-SQK" secondAttribute="centerX" id="oJb-hV-cMW"/>
                 <constraint firstItem="7Hn-48-npE" firstAttribute="top" secondItem="IAM-ei-X4e" secondAttribute="top" id="xHZ-6P-nEY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="yw8-mx-SQK"/>
+            <size key="customSize" width="87" height="87"/>
             <connections>
+                <outlet property="activityIndicator" destination="Ihl-fI-RV7" id="AsY-on-aDd"/>
                 <outlet property="imageView" destination="7Hn-48-npE" id="G7I-tf-sAQ"/>
             </connections>
+            <point key="canvasLocation" x="167.19999999999999" y="154.27286356821591"/>
         </collectionViewCell>
     </objects>
 </document>

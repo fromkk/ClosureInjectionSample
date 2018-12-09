@@ -1,0 +1,21 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow read, write: if request.auth != null &&
+        request.auth.uid == uid;
+      
+      match /medias/{hash} {
+      	allow read: if true;
+        allow write: if request.resource.data.uid is string &&
+          request.resource.data.createdAt is float &&
+          request.resource.data.updatedAt is float &&
+          request.resource.data.state is int &&
+          request.resource.data.mediaHash is string &&
+          request.resource.data.mediaHash == hash &&
+          request.resource.data.mediaType is int &&
+          request.resource.data.mediaDate is float &&
+          request.resource.data.localIdentifier is string;
+      }
+    }
+  }
+}

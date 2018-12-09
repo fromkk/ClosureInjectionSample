@@ -18,14 +18,14 @@ protocol UploadInteractorProtocol: class {
     typealias State = NetworkingState<PHFetchResult<PHAsset>>
     var state: State { get }
     var delegate: UploadInteractorDelegate? { get set }
-    func fetch()
+    func fetch(with ignoreLocalIdentifiers: [String])
 }
 
 protocol UploadPresenterProtocol: class {
     typealias Interactor = UploadInteractorProtocol
     typealias View = UploadViewProtocol
     typealias Wireframe = UploadWireframeProtocol
-    typealias Dependencies = (view: View, interactor: Interactor, router: Wireframe, assetUploader: AssetUploaderProtocol)
+    typealias Dependencies = (ignoreLocalIdentifiers: [String], view: View, interactor: Interactor, router: Wireframe, assetUploader: AssetUploaderProtocol)
     init(dependencies: Dependencies)
     
     func close()

@@ -8,6 +8,7 @@
 
 import UIKit
 import Media
+import DifferenceKit
 
 protocol TopInteractorDelegate: class {
     func topInteractor(_ topInteractor: TopInteractorProtocol, didUpdate state: TopInteractorProtocol.State)
@@ -37,12 +38,12 @@ protocol TopPresenterProtocol: class {
 }
 
 protocol TopViewProtocol: class {
-    func showMedia()
+    func reloadData(with changeSet: StagedChangeset<[MediaEntity]>)
     func showLoading()
     func hideLoading()
 }
 
 protocol TopWireframeProtocol {
     init(viewController: UIViewController)
-    func presentUploadView(with uid: String)
+    func presentUploadView(with uid: String, and ignoreLocalIdentifiers: [String])
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import DifferenceKit
 
 public enum MediaState: Int, Codable {
     case ready
@@ -22,21 +23,29 @@ public enum MediaType: Int, Codable {
     case video
 }
 
-public struct MediaEntity: Codable, Equatable {
+public struct MediaEntity: Codable, Equatable, Differentiable {
+    public var differenceIdentifier: String { return mediaHash }
+    
+    public typealias DifferenceIdentifier = String
+    
     public var uid: String
     public var imagePath: String?
     public var createdAt: TimeInterval
     public var updatedAt: TimeInterval
     public var state: MediaState
+    public var mediaHash: String
     public var mediaType: MediaType
+    public var mediaDate: TimeInterval
     public var localIdentifier: String
     public var length: Int?
     public var videoPath: String?
     
-    public init(uid: String, state: MediaState, mediaType: MediaType, localIdentifier: String, createdAt: TimeInterval, updatedAt: TimeInterval) {
+    public init(uid: String, state: MediaState, mediaHash: String, mediaType: MediaType, mediaDate: TimeInterval, localIdentifier: String, createdAt: TimeInterval, updatedAt: TimeInterval) {
         self.uid = uid
         self.state = state
+        self.mediaHash = mediaHash
         self.mediaType = mediaType
+        self.mediaDate = mediaDate
         self.localIdentifier = localIdentifier
         self.createdAt = createdAt
         self.updatedAt = updatedAt

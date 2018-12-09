@@ -16,7 +16,7 @@ final class TopWireframe: TopWireframeProtocol {
         self.viewController = viewController
     }
     
-    func presentUploadView(with uid: String) {
+    func presentUploadView(with uid: String, and ignoreLocalIdentifiers: [String]) {
         let assetUploader = AssetUploader(uid: uid)
         assetUploader.makeMetadataUpdater = { (uid, assetHash) in
             return AssetUploaderMetadataInteractor(uid: uid, assetHash: assetHash)
@@ -28,7 +28,7 @@ final class TopWireframe: TopWireframeProtocol {
         let uploadViewController = UploadViewController.instantitate()
         let interactor = UploadInteractor()
         let router = UploadWireframe(viewController: uploadViewController)
-        let presenter = UploadPresenter(dependencies: (view: uploadViewController, interactor: interactor, router: router, assetUploader: assetUploader))
+        let presenter = UploadPresenter(dependencies: (ignoreLocalIdentifiers: ignoreLocalIdentifiers ,view: uploadViewController, interactor: interactor, router: router, assetUploader: assetUploader))
         
         uploadViewController.inject(presenter)
         let navigationController = UINavigationController(rootViewController: uploadViewController)

@@ -33,20 +33,18 @@ final class TopInteractor: TopInteractorProtocol {
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
         
-        listenerRegistration = db.collection("users").document(uid).collection("medias").addSnapshotListener(includeMetadataChanges: true) { [weak self] (snapshot, _) in
+        listenerRegistration = db.collection("users").document(uid).collection("medias").order(by: "mediaDate", descending: true).addSnapshotListener(includeMetadataChanges: true) { [weak self] (snapshot, _) in
             guard let snapshot = snapshot else { return }
-            snapshot.documents.forEach({ (document) in
-                let decoder = FirestoreDecoder()
-                let result: [MediaEntity] = snapshot.documents.compactMap({ (document) -> MediaEntity? in
-                    do {
-                        return try decoder.decode(MediaEntity.self, from: document.data())
-                    } catch {
-                        debugPrint(#function, error)
-                        return nil
-                    }
-                })
-                self?.state = .success(result)
+            let decoder = FirestoreDecoder()
+            let result: [MediaEntity] = snapshot.documents.compactMap({ (document) -> MediaEntity? in
+                do {
+                    return try decoder.decode(MediaEntity.self, from: document.data())
+                } catch {
+                    debugPrint(#function, error)
+                    return nil
+                }
             })
+            self?.state = .success(result)
         }
     }
 }

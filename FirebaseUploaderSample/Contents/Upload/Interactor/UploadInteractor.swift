@@ -17,24 +17,24 @@ final class UploadInteractor: UploadInteractorProtocol {
     }
     weak var delegate: UploadInteractorDelegate?
     
-    func fetch() {
-        handlePermission(with: PHPhotoLibrary.authorizationStatus())
+    func fetch(with ignoreLocalIdentifiers: [String]) {
+        handlePermission(with: PHPhotoLibrary.authorizationStatus(), and: ignoreLocalIdentifiers)
     }
     
-    private func handlePermission(with status: PHAuthorizationStatus) {
+    private func handlePermission(with status: PHAuthorizationStatus, and ignoreLocalIdentifiers: [String]) {
         switch status {
         case .authorized:
-            performFetch()
+            performFetch(with: ignoreLocalIdentifiers)
         case .notDetermined:
             PHPhotoLibrary.requestAuthorization { [weak self] (status) in
-                self?.handlePermission(with: status)
+                self?.handlePermission(with: status, and: ignoreLocalIdentifiers)
             }
         case .denied, .restricted:
             break
         }
     }
     
-    private func performFetch() {
+    private func performFetch(with ignoreLocalIdentifiers: [String]) {
         let options = PHFetchOptions()
         options.includeAllBurstAssets = false
         options.includeAssetSourceTypes = [.typeCloudShared, .typeUserLibrary, .typeiTunesSynced]
@@ -44,6 +44,7 @@ final class UploadInteractor: UploadInteractorProtocol {
             return
         }
         
+        options.predicate = NSPredicate(format: "NOT (localIdentifier IN %@)", ignoreLocalIdentifiers)
         options.sortDescriptors = [NSSortDescriptor(keyPath: \PHAsset.creationDate, ascending: false)]
         let fetchResult: PHFetchResult<PHAsset> = PHAsset.fetchAssets(in: assetCollection, options: options)
         state = .success(fetchResult)

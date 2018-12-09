@@ -80,5 +80,6 @@ DerivedData/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 GoogleService-Info.plist
+.firebaserc
 
 # End of https://www.gitignore.io/api/osx,xcode,carthage,cocoapods

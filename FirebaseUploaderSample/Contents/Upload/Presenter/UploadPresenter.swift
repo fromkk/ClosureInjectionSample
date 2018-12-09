@@ -12,11 +12,13 @@ import AssetUploader
 
 final class UploadPresenter: UploadPresenterProtocol, UploadInteractorDelegate {
     
+    private let ignoreLocalIdentifiers: [String]
     private weak var view: View?
     private let interactor: Interactor
     private let router: Wireframe
     private let assetUploader: AssetUploaderProtocol
     init(dependencies: Dependencies) {
+        self.ignoreLocalIdentifiers = dependencies.ignoreLocalIdentifiers
         self.view = dependencies.view
         self.interactor = dependencies.interactor
         self.router = dependencies.router
@@ -33,7 +35,7 @@ final class UploadPresenter: UploadPresenterProtocol, UploadInteractorDelegate {
     }
     
     func load() {
-        interactor.fetch()
+        interactor.fetch(with: ignoreLocalIdentifiers)
     }
     
     func upload(with assets: [PHAsset]) {

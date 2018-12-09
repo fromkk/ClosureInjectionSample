@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import DifferenceKit
+import Media
 
 final class TopViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, TopViewProtocol, Injectable, XibInstantitable {
     
@@ -32,10 +34,14 @@ final class TopViewController: UIViewController, UICollectionViewDataSource, UIC
         presenter = dependencies
     }
     
+    // MARK: Properties
+    
+    var cache: NSCache<NSString, UIImage> = NSCache<NSString, UIImage>()
+    
     // MARK: TopViewProtocol
     
-    func showMedia() {
-        collectionView.reloadData()
+    func reloadData(with changeSet: StagedChangeset<[MediaEntity]>) {
+        collectionView.reload(using: changeSet) { _ in }
     }
     
     func showLoading() {
@@ -90,6 +96,7 @@ final class TopViewController: UIViewController, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopViewCell.reuseIdentifier, for: indexPath) as! TopViewCell
+        cell.cache = cache
         cell.entity = presenter?.entity(at: indexPath)
         return cell
     }

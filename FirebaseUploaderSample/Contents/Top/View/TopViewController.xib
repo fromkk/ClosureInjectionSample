@@ -42,7 +42,7 @@
                 </subviews>
                 <color key="backgroundColor" name="Background"/>
                 <constraints>
-                    <constraint firstItem="zad-CG-JUR" firstAttribute="bottom" secondItem="gdH-0j-HPW" secondAttribute="bottom" id="7tQ-V8-rbN"/>
+                    <constraint firstAttribute="bottom" secondItem="gdH-0j-HPW" secondAttribute="bottom" id="7tQ-V8-rbN"/>
                     <constraint firstItem="gdH-0j-HPW" firstAttribute="top" secondItem="zad-CG-JUR" secondAttribute="top" id="JNx-8h-Blq"/>
                     <constraint firstItem="zad-CG-JUR" firstAttribute="trailing" secondItem="4NS-qG-p53" secondAttribute="trailing" constant="20" id="prQ-HH-bO7"/>
                     <constraint firstItem="zad-CG-JUR" firstAttribute="trailing" secondItem="gdH-0j-HPW" secondAttribute="trailing" id="qw9-4p-17d"/>
