@@ -17,7 +17,7 @@ final class TopWireframeStub: TopWireframeProtocol {
     }
     
     var isPresentUploadView: Bool = false
-    func presentUploadView() {
+    func presentUploadView(with uid: String, and ignoreLocalIdentifiers: [String]) {
         isPresentUploadView = true
     }
     

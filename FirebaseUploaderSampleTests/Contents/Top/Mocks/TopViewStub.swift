@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import DifferenceKit
+import Media
 @testable import FirebaseUploaderSample
 
 final class TopViewStub: TopViewProtocol {
-    var isShowMedia: Bool = false
-    func showMedia() {
-        isShowMedia = true
+    
+    var isReloadData: Bool = false
+    func reloadData(with changeSet: StagedChangeset<[MediaEntity]>) {
+        isReloadData = true
     }
     
     var isShowLoading: Bool = false

@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		74E14777429EBD1DA10925B2 /* Pods_FirebaseUploaderSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E370004D8F0582DA1E7FD9 /* Pods_FirebaseUploaderSampleTests.framework */; };
-		8DD861E6428743D8665A00FA /* Pods_FirebaseUploaderSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5A231964C4201279AA3A60 /* Pods_FirebaseUploaderSampleUITests.framework */; };
 		AD12679A21BB4DFD00FC1932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD12679921BB4DFD00FC1932 /* AppDelegate.swift */; };
 		AD1267A121BB4DFF00FC1932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD1267A021BB4DFF00FC1932 /* Assets.xcassets */; };
 		AD1267A421BB4DFF00FC1932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1267A221BB4DFF00FC1932 /* LaunchScreen.storyboard */; };
 		AD1267AF21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1267AE21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.swift */; };
-		AD1267BA21BB4DFF00FC1932 /* FirebaseUploaderSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1267B921BB4DFF00FC1932 /* FirebaseUploaderSampleUITests.swift */; };
 		AD1267CB21BB4F1200FC1932 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD1267CA21BB4F1200FC1932 /* GoogleService-Info.plist */; };
 		AD1267CE21BB4F2E00FC1932 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1267CD21BB4F2E00FC1932 /* ApplicationCoordinator.swift */; };
 		AD1267DD21BB4F8300FC1932 /* Atomic.h in Headers */ = {isa = PBXBuildFile; fileRef = AD1267DB21BB4F8300FC1932 /* Atomic.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +29,13 @@
 		AD1267FC21BB59A200FC1932 /* Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1267FB21BB59A200FC1932 /* Instantiable.swift */; };
 		AD47C87221BD1E69006789D2 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD47C87121BD1E69006789D2 /* DifferenceKit.framework */; };
 		AD47C87321BD2003006789D2 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD47C87121BD1E69006789D2 /* DifferenceKit.framework */; };
+		AD47C87521BD3109006789D2 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD47C87121BD1E69006789D2 /* DifferenceKit.framework */; };
+		AD47C87621BD3133006789D2 /* Media.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD8D2DC21BBA433000C8532 /* Media.framework */; };
+		AD47C87921BD3260006789D2 /* PHAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47C87821BD3260006789D2 /* PHAsset.swift */; };
+		AD47C87B21BD348D006789D2 /* AssetUploaderMetadataInteractorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47C87A21BD348D006789D2 /* AssetUploaderMetadataInteractorStub.swift */; };
+		AD47C87D21BD3589006789D2 /* AssetUploaderURLTransferStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47C87C21BD3589006789D2 /* AssetUploaderURLTransferStub.swift */; };
+		AD47C87F21BD364A006789D2 /* AssetUploaderExporterTaskStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47C87E21BD364A006789D2 /* AssetUploaderExporterTaskStub.swift */; };
+		AD47C88121BD3B85006789D2 /* AssetUploaderFileManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47C88021BD3B85006789D2 /* AssetUploaderFileManagerStub.swift */; };
 		ADD8D24221BB5A9F000C8532 /* EntranceInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D24121BB5A9F000C8532 /* EntranceInterfaces.swift */; };
 		ADD8D24521BB5B01000C8532 /* UserRegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D24421BB5B01000C8532 /* UserRegisterInteractor.swift */; };
 		ADD8D24821BB5BCE000C8532 /* EntrancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D24721BB5BCE000C8532 /* EntrancePresenter.swift */; };
@@ -92,13 +97,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		AD1267AB21BB4DFF00FC1932 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AD12678E21BB4DFD00FC1932 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AD12679521BB4DFD00FC1932;
-			remoteInfo = FirebaseUploaderSample;
-		};
-		AD1267B621BB4DFF00FC1932 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AD12678E21BB4DFD00FC1932 /* Project object */;
 			proxyType = 1;
@@ -174,7 +172,6 @@
 		AD1267AA21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseUploaderSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1267AE21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUploaderSampleTests.swift; sourceTree = "<group>"; };
 		AD1267B021BB4DFF00FC1932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD1267B521BB4DFF00FC1932 /* FirebaseUploaderSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseUploaderSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1267B921BB4DFF00FC1932 /* FirebaseUploaderSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUploaderSampleUITests.swift; sourceTree = "<group>"; };
 		AD1267BB21BB4DFF00FC1932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD1267CA21BB4F1200FC1932 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -193,6 +190,11 @@
 		AD1267F921BB58D100FC1932 /* EntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceViewController.swift; sourceTree = "<group>"; };
 		AD1267FB21BB59A200FC1932 /* Instantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiable.swift; sourceTree = "<group>"; };
 		AD47C87121BD1E69006789D2 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DifferenceKit.framework; path = Carthage/Build/iOS/DifferenceKit.framework; sourceTree = "<group>"; };
+		AD47C87821BD3260006789D2 /* PHAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHAsset.swift; sourceTree = "<group>"; };
+		AD47C87A21BD348D006789D2 /* AssetUploaderMetadataInteractorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetUploaderMetadataInteractorStub.swift; sourceTree = "<group>"; };
+		AD47C87C21BD3589006789D2 /* AssetUploaderURLTransferStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetUploaderURLTransferStub.swift; sourceTree = "<group>"; };
+		AD47C87E21BD364A006789D2 /* AssetUploaderExporterTaskStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetUploaderExporterTaskStub.swift; sourceTree = "<group>"; };
+		AD47C88021BD3B85006789D2 /* AssetUploaderFileManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetUploaderFileManagerStub.swift; sourceTree = "<group>"; };
 		ADD8D24121BB5A9F000C8532 /* EntranceInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceInterfaces.swift; sourceTree = "<group>"; };
 		ADD8D24421BB5B01000C8532 /* UserRegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterInteractor.swift; sourceTree = "<group>"; };
 		ADD8D24721BB5BCE000C8532 /* EntrancePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrancePresenter.swift; sourceTree = "<group>"; };
@@ -274,15 +276,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD47C87621BD3133006789D2 /* Media.framework in Frameworks */,
+				AD47C87521BD3109006789D2 /* DifferenceKit.framework in Frameworks */,
 				74E14777429EBD1DA10925B2 /* Pods_FirebaseUploaderSampleTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD1267B221BB4DFF00FC1932 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8DD861E6428743D8665A00FA /* Pods_FirebaseUploaderSampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +353,6 @@
 			children = (
 				AD12679621BB4DFD00FC1932 /* FirebaseUploaderSample.app */,
 				AD1267AA21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.xctest */,
-				AD1267B521BB4DFF00FC1932 /* FirebaseUploaderSampleUITests.xctest */,
 				AD1267D921BB4F8200FC1932 /* Atomic.framework */,
 				ADD8D2B121BB9E48000C8532 /* AssetUploader.framework */,
 				ADD8D2B921BB9E49000C8532 /* AssetUploaderTests.xctest */,
@@ -527,6 +522,18 @@
 				AD1267ED21BB551E00FC1932 /* UserRepresentable.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		AD47C87721BD324F006789D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AD47C87821BD3260006789D2 /* PHAsset.swift */,
+				AD47C87A21BD348D006789D2 /* AssetUploaderMetadataInteractorStub.swift */,
+				AD47C87C21BD3589006789D2 /* AssetUploaderURLTransferStub.swift */,
+				AD47C87E21BD364A006789D2 /* AssetUploaderExporterTaskStub.swift */,
+				AD47C88021BD3B85006789D2 /* AssetUploaderFileManagerStub.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		ADD8D24321BB5AA4000C8532 /* Interactor */ = {
@@ -733,6 +740,7 @@
 		ADD8D2BF21BB9E49000C8532 /* AssetUploaderTests */ = {
 			isa = PBXGroup;
 			children = (
+				AD47C87721BD324F006789D2 /* Mocks */,
 				ADD8D2C021BB9E49000C8532 /* AssetUploaderTests.swift */,
 				ADD8D2C221BB9E49000C8532 /* Info.plist */,
 			);
@@ -876,25 +884,6 @@
 			productReference = AD1267AA21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AD1267B421BB4DFF00FC1932 /* FirebaseUploaderSampleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AD1267C421BB4DFF00FC1932 /* Build configuration list for PBXNativeTarget "FirebaseUploaderSampleUITests" */;
-			buildPhases = (
-				2D76314B5B75B13BD356A23C /* [CP] Check Pods Manifest.lock */,
-				AD1267B121BB4DFF00FC1932 /* Sources */,
-				AD1267B221BB4DFF00FC1932 /* Frameworks */,
-				AD1267B321BB4DFF00FC1932 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AD1267B721BB4DFF00FC1932 /* PBXTargetDependency */,
-			);
-			name = FirebaseUploaderSampleUITests;
-			productName = FirebaseUploaderSampleUITests;
-			productReference = AD1267B521BB4DFF00FC1932 /* FirebaseUploaderSampleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		AD1267D821BB4F8200FC1932 /* Atomic */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD1267E221BB4F8300FC1932 /* Build configuration list for PBXNativeTarget "Atomic" */;
@@ -985,10 +974,6 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = AD12679521BB4DFD00FC1932;
 					};
-					AD1267B421BB4DFF00FC1932 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = AD12679521BB4DFD00FC1932;
-					};
 					AD1267D821BB4F8200FC1932 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -1027,7 +1012,6 @@
 			targets = (
 				AD12679521BB4DFD00FC1932 /* FirebaseUploaderSample */,
 				AD1267A921BB4DFF00FC1932 /* FirebaseUploaderSampleTests */,
-				AD1267B421BB4DFF00FC1932 /* FirebaseUploaderSampleUITests */,
 				AD1267D821BB4F8200FC1932 /* Atomic */,
 				ADD8D2B021BB9E48000C8532 /* AssetUploader */,
 				ADD8D2B821BB9E49000C8532 /* AssetUploaderTests */,
@@ -1053,13 +1037,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AD1267A821BB4DFF00FC1932 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD1267B321BB4DFF00FC1932 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1113,28 +1090,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-FirebaseUploaderSampleTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D76314B5B75B13BD356A23C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FirebaseUploaderSampleUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1296,14 +1251,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD1267B121BB4DFF00FC1932 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AD1267BA21BB4DFF00FC1932 /* FirebaseUploaderSampleUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AD1267D521BB4F8200FC1932 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1332,7 +1279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD47C87B21BD348D006789D2 /* AssetUploaderMetadataInteractorStub.swift in Sources */,
+				AD47C87F21BD364A006789D2 /* AssetUploaderExporterTaskStub.swift in Sources */,
+				AD47C88121BD3B85006789D2 /* AssetUploaderFileManagerStub.swift in Sources */,
 				ADD8D2C121BB9E49000C8532 /* AssetUploaderTests.swift in Sources */,
+				AD47C87921BD3260006789D2 /* PHAsset.swift in Sources */,
+				AD47C87D21BD3589006789D2 /* AssetUploaderURLTransferStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1351,11 +1303,6 @@
 			isa = PBXTargetDependency;
 			target = AD12679521BB4DFD00FC1932 /* FirebaseUploaderSample */;
 			targetProxy = AD1267AB21BB4DFF00FC1932 /* PBXContainerItemProxy */;
-		};
-		AD1267B721BB4DFF00FC1932 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AD12679521BB4DFD00FC1932 /* FirebaseUploaderSample */;
-			targetProxy = AD1267B621BB4DFF00FC1932 /* PBXContainerItemProxy */;
 		};
 		AD1267DF21BB4F8300FC1932 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1570,6 +1517,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FirebaseUploaderSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1592,6 +1543,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FirebaseUploaderSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1603,48 +1558,6 @@
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirebaseUploaderSample.app/FirebaseUploaderSample";
-			};
-			name = Release;
-		};
-		AD1267C521BB4DFF00FC1932 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C72A53B4FF0B90EF8EDC02B4 /* Pods-FirebaseUploaderSampleUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K84E4S7G4C;
-				INFOPLIST_FILE = FirebaseUploaderSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FirebaseUploaderSampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FirebaseUploaderSample;
-			};
-			name = Debug;
-		};
-		AD1267C621BB4DFF00FC1932 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 593B9FAB9EF988F8E3E47584 /* Pods-FirebaseUploaderSampleUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K84E4S7G4C;
-				INFOPLIST_FILE = FirebaseUploaderSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FirebaseUploaderSampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FirebaseUploaderSample;
 			};
 			name = Release;
 		};
@@ -1778,6 +1691,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AssetUploaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1798,6 +1715,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AssetUploaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1904,15 +1825,6 @@
 			buildConfigurations = (
 				AD1267C221BB4DFF00FC1932 /* Debug */,
 				AD1267C321BB4DFF00FC1932 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AD1267C421BB4DFF00FC1932 /* Build configuration list for PBXNativeTarget "FirebaseUploaderSampleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AD1267C521BB4DFF00FC1932 /* Debug */,
-				AD1267C621BB4DFF00FC1932 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

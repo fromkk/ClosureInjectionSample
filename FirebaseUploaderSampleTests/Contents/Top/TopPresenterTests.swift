@@ -21,11 +21,11 @@ final class TopPresenterTest: XCTestCase {
         
         XCTAssertFalse(interactor.isFetched)
         XCTAssertFalse(view.isShowLoading)
-        XCTAssertFalse(view.isShowMedia)
+        XCTAssertFalse(view.isReloadData)
         presenter.load()
         XCTAssertTrue(interactor.isFetched)
         XCTAssertTrue(view.isShowLoading)
-        XCTAssertTrue(view.isShowMedia)
+        XCTAssertTrue(view.isReloadData)
     }
     
     func testUpload() {
