@@ -11,7 +11,6 @@
 		AD12679A21BB4DFD00FC1932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD12679921BB4DFD00FC1932 /* AppDelegate.swift */; };
 		AD1267A121BB4DFF00FC1932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD1267A021BB4DFF00FC1932 /* Assets.xcassets */; };
 		AD1267A421BB4DFF00FC1932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1267A221BB4DFF00FC1932 /* LaunchScreen.storyboard */; };
-		AD1267AF21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1267AE21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.swift */; };
 		AD1267CB21BB4F1200FC1932 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD1267CA21BB4F1200FC1932 /* GoogleService-Info.plist */; };
 		AD1267CE21BB4F2E00FC1932 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1267CD21BB4F2E00FC1932 /* ApplicationCoordinator.swift */; };
 		AD1267DD21BB4F8300FC1932 /* Atomic.h in Headers */ = {isa = PBXBuildFile; fileRef = AD1267DB21BB4F8300FC1932 /* Atomic.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -170,7 +169,6 @@
 		AD1267A321BB4DFF00FC1932 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD1267A521BB4DFF00FC1932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD1267AA21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseUploaderSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD1267AE21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUploaderSampleTests.swift; sourceTree = "<group>"; };
 		AD1267B021BB4DFF00FC1932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD1267B921BB4DFF00FC1932 /* FirebaseUploaderSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUploaderSampleUITests.swift; sourceTree = "<group>"; };
 		AD1267BB21BB4DFF00FC1932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -382,7 +380,6 @@
 				ADD8D28F21BB8994000C8532 /* Model */,
 				AD1267C721BB4E1E00FC1932 /* ApplicationCoordinator */,
 				ADD8D27C21BB8529000C8532 /* Contents */,
-				AD1267AE21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.swift */,
 				AD1267B021BB4DFF00FC1932 /* Info.plist */,
 			);
 			path = FirebaseUploaderSampleTests;
@@ -1241,7 +1238,6 @@
 				ADD8D28621BB86C8000C8532 /* UserRegisterInteractorStub.swift in Sources */,
 				ADD8D28221BB8571000C8532 /* TopPresenterTests.swift in Sources */,
 				ADD8D28821BB8709000C8532 /* EntranceViewStub.swift in Sources */,
-				AD1267AF21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.swift in Sources */,
 				ADD8D28C21BB8824000C8532 /* TopWireframeStub.swift in Sources */,
 				ADD8D28021BB8565000C8532 /* EntrancePresenterTests.swift in Sources */,
 				ADD8D29121BB89A0000C8532 /* UserMock.swift in Sources */,
