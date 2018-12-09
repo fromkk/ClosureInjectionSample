@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import AssetUploader
 
 protocol UploadInteractorDelegate: class {
     func uploadInteractor(_ uploadInteractor: UploadInteractorProtocol, didUpdate state: UploadInteractorProtocol.State)
@@ -24,7 +25,7 @@ protocol UploadPresenterProtocol: class {
     typealias Interactor = UploadInteractorProtocol
     typealias View = UploadViewProtocol
     typealias Wireframe = UploadWireframeProtocol
-    typealias Dependencies = (view: View, interactor: Interactor, router: Wireframe)
+    typealias Dependencies = (view: View, interactor: Interactor, router: Wireframe, assetUploader: AssetUploaderProtocol)
     init(dependencies: Dependencies)
     
     func close()

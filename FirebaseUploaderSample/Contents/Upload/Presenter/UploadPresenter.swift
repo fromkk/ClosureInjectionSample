@@ -8,16 +8,19 @@
 
 import Foundation
 import Photos
+import AssetUploader
 
 final class UploadPresenter: UploadPresenterProtocol, UploadInteractorDelegate {
     
     private weak var view: View?
     private let interactor: Interactor
     private let router: Wireframe
+    private let assetUploader: AssetUploaderProtocol
     init(dependencies: Dependencies) {
         self.view = dependencies.view
         self.interactor = dependencies.interactor
         self.router = dependencies.router
+        self.assetUploader = dependencies.assetUploader
         interactor.delegate = self
     }
     
@@ -34,7 +37,8 @@ final class UploadPresenter: UploadPresenterProtocol, UploadInteractorDelegate {
     }
     
     func upload(with assets: [PHAsset]) {
-        // TODO: upload
+        assetUploader.upload(with: assets)
+        router.dismiss()
     }
     
     func numberOfAssets() -> Int {

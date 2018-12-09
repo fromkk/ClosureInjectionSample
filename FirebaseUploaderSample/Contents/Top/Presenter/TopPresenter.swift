@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Media
 
 final class TopPresenter: TopPresenterProtocol, TopInteractorDelegate {
     
@@ -24,7 +25,7 @@ final class TopPresenter: TopPresenterProtocol, TopInteractorDelegate {
     }
     
     func upload() {
-        router.presentUploadView()
+        router.presentUploadView(with: user.uid)
     }
     
     func load() {

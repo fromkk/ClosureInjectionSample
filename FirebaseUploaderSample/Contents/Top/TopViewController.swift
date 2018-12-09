@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Nuke
 
 final class TopViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, TopViewProtocol, Injectable, XibInstantitable {
     
@@ -91,11 +90,7 @@ final class TopViewController: UIViewController, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopViewCell.reuseIdentifier, for: indexPath) as! TopViewCell
-        if let entity = presenter?.entity(at: indexPath) {
-            Nuke.loadImage(with: entity.imageUrl, into: cell.imageView)
-        } else {
-            cell.imageView.image = nil
-        }
+        cell.entity = presenter?.entity(at: indexPath)
         return cell
     }
 }

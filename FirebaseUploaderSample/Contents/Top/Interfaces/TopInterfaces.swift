@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Media
 
 protocol TopInteractorDelegate: class {
     func topInteractor(_ topInteractor: TopInteractorProtocol, didUpdate state: TopInteractorProtocol.State)
@@ -43,5 +44,5 @@ protocol TopViewProtocol: class {
 
 protocol TopWireframeProtocol {
     init(viewController: UIViewController)
-    func presentUploadView()
+    func presentUploadView(with uid: String)
 }
