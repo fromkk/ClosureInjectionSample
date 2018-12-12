@@ -170,8 +170,6 @@
 		AD1267A521BB4DFF00FC1932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD1267AA21BB4DFF00FC1932 /* FirebaseUploaderSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseUploaderSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1267B021BB4DFF00FC1932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD1267B921BB4DFF00FC1932 /* FirebaseUploaderSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUploaderSampleUITests.swift; sourceTree = "<group>"; };
-		AD1267BB21BB4DFF00FC1932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD1267CA21BB4F1200FC1932 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD1267CD21BB4F2E00FC1932 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		AD1267D921BB4F8200FC1932 /* Atomic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Atomic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,7 +333,6 @@
 			children = (
 				AD12679821BB4DFD00FC1932 /* FirebaseUploaderSample */,
 				AD1267AD21BB4DFF00FC1932 /* FirebaseUploaderSampleTests */,
-				AD1267B821BB4DFF00FC1932 /* FirebaseUploaderSampleUITests */,
 				AD1267DA21BB4F8300FC1932 /* Atomic */,
 				ADD8D2B221BB9E49000C8532 /* AssetUploader */,
 				ADD8D2BF21BB9E49000C8532 /* AssetUploaderTests */,
@@ -383,15 +380,6 @@
 				AD1267B021BB4DFF00FC1932 /* Info.plist */,
 			);
 			path = FirebaseUploaderSampleTests;
-			sourceTree = "<group>";
-		};
-		AD1267B821BB4DFF00FC1932 /* FirebaseUploaderSampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AD1267B921BB4DFF00FC1932 /* FirebaseUploaderSampleUITests.swift */,
-				AD1267BB21BB4DFF00FC1932 /* Info.plist */,
-			);
-			path = FirebaseUploaderSampleUITests;
 			sourceTree = "<group>";
 		};
 		AD1267C721BB4E1E00FC1932 /* ApplicationCoordinator */ = {

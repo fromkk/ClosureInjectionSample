@@ -81,7 +81,5 @@ DerivedData/
 
 GoogleService-Info.plist
 .firebaserc
-Cartfile.resolved
-Podfile.lock
 
 # End of https://www.gitignore.io/api/osx,xcode,carthage,cocoapods
