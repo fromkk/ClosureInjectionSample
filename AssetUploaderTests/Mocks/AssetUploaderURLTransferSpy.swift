@@ -9,7 +9,7 @@
 import Foundation
 @testable import AssetUploader
 
-final class AssetUploaderURLTransferStub: AssetUploaderTask, AssetUploaderURLTransferProtocol {
+final class AssetUploaderURLTransferSpy: AssetUploaderTask, AssetUploaderURLTransferProtocol {
     var error: Error?
     
     var url: URL
@@ -27,10 +27,15 @@ final class AssetUploaderURLTransferStub: AssetUploaderTask, AssetUploaderURLTra
     
     var isTransfered: Bool = false
     
+    var numberOfTransfered: Int = 0
+    
     override func main() {
         super.main()
         
-        defer { isTransfered = true }
+        defer {
+            isTransfered = true
+            numberOfTransfered += 1
+        }
         
         if let nextState = nextState {
             state = nextState

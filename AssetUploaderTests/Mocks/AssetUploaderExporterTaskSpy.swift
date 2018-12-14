@@ -10,7 +10,7 @@ import Foundation
 import Photos
 @testable import AssetUploader
 
-final class AssetUploaderExporterTaskStub: AssetUploaderTask, AssetUploaderExporterProtocol {
+final class AssetUploaderExporterTaskSpy: AssetUploaderTask, AssetUploaderExporterProtocol {
     
     let uid: UID
     let assetHash: AssetHash
@@ -28,10 +28,15 @@ final class AssetUploaderExporterTaskStub: AssetUploaderTask, AssetUploaderExpor
     
     var isExported: Bool = false
     
+    var numberOfExported: Int = 0
+    
     override func main() {
         super.main()
         
-        defer { isExported = true }
+        defer {
+            isExported = true
+            numberOfExported += 1
+        }
         
         if let nextState = nextState {
             state = nextState

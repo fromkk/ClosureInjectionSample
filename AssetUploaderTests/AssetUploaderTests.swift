@@ -25,26 +25,26 @@ class AssetUploaderTests: XCTestCase {
         // MARK: - Closure Injections
         
         // MARK: Metadata
-        var metadataInteractor: AssetUploaderMetadataInteractorStub?
+        var metadataInteractor: AssetUploaderMetadataInteractorSpy?
         assetUploader.makeMetadataUpdater = { (uid, assetHash) in
-            let result = AssetUploaderMetadataInteractorStub(uid: uid, assetHash: assetHash)
+            let result = AssetUploaderMetadataInteractorSpy(uid: uid, assetHash: assetHash)
             metadataInteractor = result
             return result
         }
         
         // MARK: Exporter
-        var exporterTask: AssetUploaderExporterTaskStub?
+        var exporterTask: AssetUploaderExporterTaskSpy?
         assetUploader.makeExportTask = { (uid, assetHash, asset) in
-            let result = AssetUploaderExporterTaskStub(uid: uid, assetHash: assetHash, asset: asset)
+            let result = AssetUploaderExporterTaskSpy(uid: uid, assetHash: assetHash, asset: asset)
             result.nextState = .isFinished
             exporterTask = result
             return result
         }
         
         // MARK: URLTransfer
-        var urlTransferTask: AssetUploaderURLTransferStub?
+        var urlTransferTask: AssetUploaderURLTransferSpy?
         assetUploader.makeTransferTask = { (url, uid, assetHash, path) in
-            let result = AssetUploaderURLTransferStub(url: url, uid: uid, assetHash: assetHash, path: path)
+            let result = AssetUploaderURLTransferSpy(url: url, uid: uid, assetHash: assetHash, path: path)
             result.nextState = .isFinished
             urlTransferTask = result
             return result
@@ -65,12 +65,14 @@ class AssetUploaderTests: XCTestCase {
                 return
             }
             XCTAssertTrue(exporterTask.isExported)
+            XCTAssertEqual(exporterTask.numberOfExported, 1)
             
             guard let urlTransferTask = urlTransferTask else {
                 XCTFail("urlTransferTask is not initialized")
                 return
             }
             XCTAssertTrue(urlTransferTask.isTransfered)
+            XCTAssertEqual(urlTransferTask.numberOfTransfered, 1)
             
             guard let metadataInteractor = metadataInteractor else {
                 XCTFail("metadataInteractor is not initialized")
@@ -78,7 +80,9 @@ class AssetUploaderTests: XCTestCase {
             }
             XCTAssertEqual(uid, metadataInteractor.uid)
             XCTAssertTrue(metadataInteractor.isUpdateImagePathAndState) // only photo
+            XCTAssertEqual(metadataInteractor.numberOfUpdateImagePathAndState, 1)
             XCTAssertFalse(metadataInteractor.isUpdateImagePathAndVideoPathAndState) // only video
+            XCTAssertEqual(metadataInteractor.numberOfUpdateImagePathAndVideoPathAndState, 0)
             
             expectation.fulfill()
         }
@@ -92,26 +96,26 @@ class AssetUploaderTests: XCTestCase {
         // MARK: - Closure Injections
         
         // MARK: Metadata
-        var metadataInteractor: AssetUploaderMetadataInteractorStub?
+        var metadataInteractor: AssetUploaderMetadataInteractorSpy?
         assetUploader.makeMetadataUpdater = { (uid, assetHash) in
-            let result = AssetUploaderMetadataInteractorStub(uid: uid, assetHash: assetHash)
+            let result = AssetUploaderMetadataInteractorSpy(uid: uid, assetHash: assetHash)
             metadataInteractor = result
             return result
         }
         
         // MARK: Exporter
-        var exporterTask: AssetUploaderExporterTaskStub?
+        var exporterTask: AssetUploaderExporterTaskSpy?
         assetUploader.makeExportTask = { (uid, assetHash, asset) in
-            let result = AssetUploaderExporterTaskStub(uid: uid, assetHash: assetHash, asset: asset)
+            let result = AssetUploaderExporterTaskSpy(uid: uid, assetHash: assetHash, asset: asset)
             result.nextState = .isFinished
             exporterTask = result
             return result
         }
         
         // MARK: URLTransfer
-        var urlTransferTask: AssetUploaderURLTransferStub?
+        var urlTransferTask: AssetUploaderURLTransferSpy?
         assetUploader.makeTransferTask = { (url, uid, assetHash, path) in
-            let result = AssetUploaderURLTransferStub(url: url, uid: uid, assetHash: assetHash, path: path)
+            let result = AssetUploaderURLTransferSpy(url: url, uid: uid, assetHash: assetHash, path: path)
             result.nextState = .isFinished
             urlTransferTask = result
             return result
@@ -132,12 +136,14 @@ class AssetUploaderTests: XCTestCase {
                 return
             }
             XCTAssertTrue(exporterTask.isExported)
+            XCTAssertEqual(exporterTask.numberOfExported, 1)
             
             guard let urlTransferTask = urlTransferTask else {
                 XCTFail("urlTransferTask is not initialized")
                 return
             }
             XCTAssertTrue(urlTransferTask.isTransfered)
+            XCTAssertEqual(urlTransferTask.numberOfTransfered, 1)
             
             guard let metadataInteractor = metadataInteractor else {
                 XCTFail("metadataInteractor is not initialized")
@@ -145,7 +151,9 @@ class AssetUploaderTests: XCTestCase {
             }
             XCTAssertEqual(uid, metadataInteractor.uid)
             XCTAssertFalse(metadataInteractor.isUpdateImagePathAndState) // only photo
+            XCTAssertEqual(metadataInteractor.numberOfUpdateImagePathAndState, 0)
             XCTAssertTrue(metadataInteractor.isUpdateImagePathAndVideoPathAndState) // only video
+            XCTAssertEqual(metadataInteractor.numberOfUpdateImagePathAndVideoPathAndState, 1)
             
             expectation.fulfill()
         }
