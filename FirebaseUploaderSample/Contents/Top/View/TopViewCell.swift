@@ -16,6 +16,7 @@ final class TopViewCell: UICollectionViewCell {
     static let reuseIdentifier: String = "TopViewCell"
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var progressView: UIProgressView!
     var entity: MediaEntity? {
         didSet {
             guard entity != oldValue else { return }
@@ -28,6 +29,7 @@ final class TopViewCell: UICollectionViewCell {
     
     private func configure() {
         imageView.image = nil
+        progressView.isHidden = true
         
         guard let entity = entity else { return }
         
@@ -49,7 +51,12 @@ final class TopViewCell: UICollectionViewCell {
                 Storage.storage().reference(withPath: imagePath).downloadURL { [weak self] (url, error) in
                     guard let self = self else { return }
                     guard let url = url, self.entity == entity else { return }
-                    ImagePipeline.shared.loadImage(with: url, progress: nil, completion: { [weak self] (response, error) in
+                    ImagePipeline.shared.loadImage(with: url, progress: { [weak self] response, completed, total in
+                        let progress = Float(completed) / Float(total)
+                        self?.progressView.isHidden = false
+                        self?.progressView.progress = progress
+                    }, completion: { [weak self] (response, error) in
+                        self?.progressView.isHidden = true
                         self?.imageView.image = response?.image
                         if let image = response?.image {
                             self?.cache?.setObject(image, forKey: imagePath as NSString)

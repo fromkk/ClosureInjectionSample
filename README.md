@@ -1,6 +1,6 @@
 # ClosureInjection sample
 
-![Swift badge](https://img.shields.io/badge/Swift-4.2-F16D39.svg?style=flat) ![Swift badge](https://img.shields.io/badge/iOS-11-F16D39.svg?style=flat)
+![Swift badge](https://img.shields.io/badge/Swift-4.2-F16D39.svg?style=flat) ![Swift badge](https://img.shields.io/badge/iOS-11-F16D39.svg?style=flat) [![Build Status](https://app.bitrise.io/app/d38251109598b007/status.svg?token=bnMZAhHtoms2PJEQFGPQ2w&branch=master)](https://app.bitrise.io/app/d38251109598b007)
 
 ---
 

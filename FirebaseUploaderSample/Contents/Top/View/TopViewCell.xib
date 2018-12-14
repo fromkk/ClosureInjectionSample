@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,23 +26,36 @@
                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ihl-fI-RV7">
                         <rect key="frame" x="33.5" y="33.5" width="20" height="20"/>
                     </activityIndicatorView>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p5o-T6-8PL">
+                        <rect key="frame" x="0.0" y="0.0" width="87" height="2"/>
+                        <color key="tintColor" name="Theme"/>
+                    </progressView>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="p5o-T6-8PL" firstAttribute="leading" secondItem="IAM-ei-X4e" secondAttribute="leading" id="31j-nl-t1h"/>
                 <constraint firstAttribute="trailing" secondItem="7Hn-48-npE" secondAttribute="trailing" id="5oE-19-Typ"/>
                 <constraint firstItem="Ihl-fI-RV7" firstAttribute="centerY" secondItem="yw8-mx-SQK" secondAttribute="centerY" id="MLG-Xz-vav"/>
                 <constraint firstAttribute="bottom" secondItem="7Hn-48-npE" secondAttribute="bottom" id="fQ0-4x-Bn4"/>
                 <constraint firstItem="7Hn-48-npE" firstAttribute="leading" secondItem="IAM-ei-X4e" secondAttribute="leading" id="jaH-SN-pfV"/>
                 <constraint firstItem="Ihl-fI-RV7" firstAttribute="centerX" secondItem="yw8-mx-SQK" secondAttribute="centerX" id="oJb-hV-cMW"/>
+                <constraint firstItem="p5o-T6-8PL" firstAttribute="top" secondItem="IAM-ei-X4e" secondAttribute="top" id="v4L-sC-4sl"/>
                 <constraint firstItem="7Hn-48-npE" firstAttribute="top" secondItem="IAM-ei-X4e" secondAttribute="top" id="xHZ-6P-nEY"/>
+                <constraint firstAttribute="trailing" secondItem="p5o-T6-8PL" secondAttribute="trailing" id="zw8-bH-1aQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="yw8-mx-SQK"/>
             <size key="customSize" width="87" height="87"/>
             <connections>
                 <outlet property="activityIndicator" destination="Ihl-fI-RV7" id="AsY-on-aDd"/>
                 <outlet property="imageView" destination="7Hn-48-npE" id="G7I-tf-sAQ"/>
+                <outlet property="progressView" destination="p5o-T6-8PL" id="X0q-Zp-qsU"/>
             </connections>
             <point key="canvasLocation" x="167.19999999999999" y="154.27286356821591"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="Theme">
+            <color red="0.047058823529411764" green="0.27843137254901962" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
